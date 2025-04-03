@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Ordering Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url('cake1.jpeg'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .form-container {
+      background: rgba(255, 255, 255, 0.8); 
+      padding: 30px;
+      border-radius: 15px;
+      margin: 50px auto;
+      max-width: 600px;
+    }
+    .form-control:invalid {
+      border-color: #dc3545;
+    }
+    .form-control:valid {
+      border-color: #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="form-container">
+      <h2 class="mb-4">Cake Ordering Form</h2>
+      <form id="cakeOrderForm" novalidate>
+        <!-- Name -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" placeholder="Name" required pattern="[A-Za-z\s]+">
+          <label for="name">Name</label>
+          <div class="invalid-feedback">Please enter your name. Only letters and spaces are allowed.</div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Email" required>
+          <label for="email">Email</label>
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="phone" placeholder="Phone Number" required pattern="\d{10}">
+          <label for="phone">Phone Number</label>
+          <div class="invalid-feedback">Please enter a valid phone number (10 digits).</div>
+        </div>
+
+        <!-- Select Cake Flavor -->
+        <div class="mb-3 form-group">
+          <label for="select" class="form-label">Select Cake Flavor</label>
+          <select class="form-select" id="select" required>
+            <option value="1">Vanilla</option>
+            <option value="2">Chocolate</option>
+            <option value="3">Strawberry</option>
+            <option value="4" disabled>Red Velvet</option>
+          </select>
+          <div class="invalid-feedback">Please select a cake flavor.</div>
+        </div>
+
+        <!-- Cake Size -->
+        <div class="mb-3 form-group">
+          <label class="form-label">Cake Size</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cakeSize" id="small" value="small" required>
+            <label class="form-check-label" for="small">Small</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cakeSize" id="medium" value="medium" required checked>
+            <label class="form-check-label" for="medium">Medium</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cakeSize" id="large" value="large" required>
+            <label class="form-check-label" for="large">Large</label>
+          </div>
+          <div class="invalid-feedback">Please select a cake size.</div>
+        </div>
+
+        <!-- Sweetness Level -->
+        <div class="mb-3 form-group">
+          <label for="range" class="form-label">Sweetness Level</label>
+          <input type="range" class="form-range" id="range" min="0" max="100" required>
+          <div class="invalid-feedback">Please select a sweetness level.</div>
+        </div>
+
+        <!-- Special Instructions -->
+        <div class="mb-3 form-group">
+          <label for="largeInput" class="form-label">Special Instructions (Large Input)</label>
+          <input type="text" class="form-control form-control-lg" id="largeInput" required>
+          <div class="invalid-feedback">Please enter any special instructions.</div>
+        </div>
+
+        <!-- Preferred Delivery Date -->
+        <div class="mb-3 form-group">
+          <label for="deliveryDate" class="form-label">Preferred Delivery Date</label>
+          <input type="date" class="form-control" id="deliveryDate" required>
+          <div class="invalid-feedback">Please select a preferred delivery date.</div>
+        </div>
+
+        <!-- Preferred Delivery Time -->
+        <div class="mb-3 form-group">
+          <label for="deliveryTime" class="form-label">Preferred Delivery Time</label>
+          <input type="time" class="form-control" id="deliveryTime" required>
+          <div class="invalid-feedback">Please select a preferred delivery time.</div>
+        </div>
+
+        <!-- Select a color for the cake decoration -->
+        <div class="mb-3 form-group">
+          <label for="color" class="form-label">Select a color for the cake decoration</label>
+          <input type="color" class="form-control form-control-color" id="color" required>
+          <div class="invalid-feedback">Please select a color.</div>
+        </div>
+
+        <!-- Upload Design (PDF) -->
+        <div class="mb-3 form-group">
+          <label for="file" class="form-label">Upload Design (PDF)</label>
+          <input type="file" class="form-control" id="file" accept=".pdf" required>
+          <div class="invalid-feedback">Please upload a design in PDF format.</div>
+        </div>
+
+        <!-- Eggless Cake -->
+        <div class="form-check form-switch mb-3">
+          <input class="form-check-input" type="checkbox" id="eggless">
+          <label class="form-check-label" for="eggless">Eggless Cake</label>
+        </div>
+
+        <!-- Delivery Address -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="address" placeholder="Delivery Address" required>
+          <label for="address">Delivery Address</label>
+          <div class="invalid-feedback">Please enter the delivery address.</div>
+        </div>
+
+        <!-- Zip Code -->
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="zip" placeholder="Zip Code" required pattern="\d{6}">
+          <label for="zip">Zip Code</label>
+          <div class="invalid-feedback">Please enter a valid zip code (6 digits).</div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('cakeOrderForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const form = event.target;
+
+      const nameInput = document.getElementById('name');
+      const phoneInput = document.getElementById('phone');
+
+      const namePattern = /^[A-Za-z\s]+$/;
+      const phonePattern = /^\d{10}$/;
+
+      if (!namePattern.test(nameInput.value)) {
+        alert('Name should only contain letters and spaces.');
+        nameInput.classList.add('is-invalid');
+        return;
+      }
+
+      if (!phonePattern.test(phoneInput.value)) {
+        alert('Phone number should be 10 digits and contain only numbers.');
+        phoneInput.classList.add('is-invalid');
+        return;
+      }
+
+      if (form.checkValidity() === false) {
+        event.stopPropagation();
+      } else {
+        alert('Form submitted successfully!');
+        window.location.href = 'confirm.html'; // Redirect to confirmation page
+      }
+
+      form.classList.add('was-validated');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Clazzy Cake Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+   
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+    .banner {
+      height: 400px;
+      background: url('cake2.jpeg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    .banner h1 {
+      font-size: 6rem;
+      margin-bottom: 20px;
+    }
+    .banner p {
+      font-size: 1.5rem;
+    }
+    .product {
+      padding: 50px 0;
+    }
+    .product img {
+      max-width: 100%;
+    }
+    .hover-image {
+      transition: transform 0.3s;
+    }
+    .hover-image:hover {
+      transform: scale(1.1);
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+    .footer img {
+      width: 100px;
+    }
+    .smaller-form {
+      max-width: 400px;
+      margin: auto;
+    }
+    /* Adjustments */
+    #about-us .row {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    #about-us .col-md-6 {
+      padding-left: 30px;
+    }
+    .offer-page {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #f8f9fa;
+      padding: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+    }
+    .offer-page h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+    .offer-page img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">The Cake Shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#signature-cakes">Signature Cakes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#creative-cakes">Creative Cakes</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Special Cakes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="choc.html">Chocolate Fudge Cake</a></li>
+              <li><a class="dropdown-item" href="vanila.html">Vanilla Bean Cake</a></li>
+              <li><a class="dropdown-item" href="red.html">Red Velvet Cake</a></li>
+              <li><a class="dropdown-item disabled" href="#">Butterscotch Cake</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <h1>Welcome to The Clazzy Cake Shop</h1>
+          <p class=>Discover the finest cakes and pastries for every occasion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Home Section with Video -->
+  <section id="home" class="container mt-5">
+    <div class="row">
+      <div class="col-md text-center">
+        <h1 class="text-danger">Welcome to Our Cake Shop</h1>
+        <p class="lead">The best cakes in town made with love and passion.</p>
+        <video width="600" controls>
+          <source src="https://www.bing.com/videos/riverview/relatedvideo?q=cake+video&mid=7560721ED0ECE46160C37560721ED0ECE46160C3&FORM=VIRE">
+          
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="signature-cakes" class="product">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="cake3.jpg" class="rounded-circle" alt="Special Cakes">
+          <h2>Special Cakes</h2>
+          <p class="text-danger">Delicious cakes made with the finest ingredients.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="cake2.jpeg" class="rounded-circle" alt="Wedding Cakes">
+          <h2>Wedding Cakes</h2>
+          <p class="text-danger">Elegant and delicious cakes for your special day.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="cake1.jpg" class="rounded-circle" alt="Pastries">
+          <h2>Pastries</h2>
+          <p class="text-danger">Indulge in our selection of delightful pastries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about-us" class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p class="text-danger">We at The Cake Shop specialize in Desserts & Cakes. We believe in "Quality in our Edge", from selecting the ingredients around India to the final exquisite creation that "Bring you smiles for Sure". Our cakes & Desserts receive a lot of compliments and are complimented by wide range of exclusive desserts. Our theme based Creative Cakes, Cake pop, Cup Cakes and Desserts for Parties, make you Party Unique and Inevitable. We spend more time in understanding customers expectation, So we Perfectly Personalize to the Needs We are a family-owned bakery that has been serving delicious cakes and pastries for over 20 years. Our recipes have been passed down through generations, and we use only the finest ingredients to create our baked goods.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="kitchen.jpg" class="rounded-circle" alt="About Us Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Creative Cakes Section with Accordion -->
+  <section id="creative-cakes" class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Creative Cakes</h2>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Chocolate cake
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+               <div class="row container-fluid">
+               <div class="container">
+                <img src="cake1.jpg" class="img-fluid" col-lg-5" alt="Creative Cake 1 Image" height="60%" width="50%">
+                </div>
+                <div class="container">
+                The history of chocolate cake goes back to the 17th century, when cocoa powder from the Americas was added to traditional cake recipes.[2]
+In 1828, Coenraad van Houten of the Netherlands developed a mechanical method for extracting the fat from cacao liquor, resulting in cacao butter and the partly defatted cacao, a compacted mass of solids that could be sold as "rock cacao" or ground into powder.[3] The processes transformed chocolate from an exclusive luxury to an inexpensive daily snack.[3]
+A process for making silkier and smoother chocolate, called conching, was developed in Switzerland in 1879 by Rodolphe Lindt. This made it easier to bake with chocolate, as it amalgamates smoothly and completely with cake batters.[3] Until the 1890s, chocolate recipes were mostly for chocolate drinks,[3] and its presence in cakes was only in fillings and glazes.
+              </div>
+              </div> 
+             </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Chocolate Muffins
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <img src="muffins.jpg" class="rounded-circle" style="center" alt="Chocolate Muffins">
+
+
+<p class="text-end">Rich and delicious Chocolate Muffins made with an intense chocolate batter and studded with chocolate chips throughout. These muffins taste incredible and are super easy to make, perfect for breakfast or as a snack! If you’re a chocolate chip muffin lover you’ll go crazy for these extra rich chocolate muffins! These muffins are so intensely chocolatey made with natural cocoa powder, vanilla, and packed full of chocolate chips in every bite. This recipe uses really easy and simple ingredients (see my list below for important notes and substitutions) and they keep well for days so you can enjoy them all week long for breakfast or as a snack, I mean who can resist chocolate for breakfast?
+</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Velvetty
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <img src="cake3.jpg" class="rounded-circle" alt="Creative Cake 3 Image" width="20%" height="10%" text>
+                Popular in the southern U.S., red velvet cake is a vanilla cake with a few tablespoons of cocoa powder and red food coloring mixed in. Vinegar and buttermilk bring some acid to the batter, adding a bit of tanginess that balances out the sweet cream cheese-butter frosting that is standard. The crumb of the cake is very fine, soft and smooth.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="logo.jpeg" alt="Logo">
+        </div>
+      <p>@clazzycakeshop@2024</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
