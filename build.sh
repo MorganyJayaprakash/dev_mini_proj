@@ -1,8 +1,8 @@
 #!/bin/bash
-docker build -t task37 .
+docker build -t morgany .
 echo Hyyy
-docker login -u surethan37 -p 55665566@S37
-docker tag task37 surethan37/task2
-docker push surethan37/task2
+docker login -u morganyy-p morgany2004
+docker tag morgany morganyy/dev_miniproj
+docker push morganyy/dev_miniproj
 kubectl apply -f  deploy.yaml --validate=false
 kubectl apply -f svc.yaml --validate=false
